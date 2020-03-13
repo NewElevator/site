@@ -1,0 +1,279 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!--meta 单标签 用来引入或声明一些内容-->
+
+    <meta charset="UTF-8">
+
+    <!--title 标题标签-->
+
+    <title>个人主页</title>
+
+    <style>
+
+        body{
+
+            /*边界看宽度默认为8,在这里初始值设为零*/
+
+            margin: 0;
+
+            font-family: 黑体;
+
+        }
+
+        nav{
+
+            width: 100%;
+
+            height: 64px;
+
+            /*定位方式: 固定位置*/
+
+            position: fixed;
+
+            top: 0;
+
+            background-color: white;
+
+            z-index: 1000;
+
+        }
+
+        /*找到nav标签下 div标签后代选择器 ，可以找到nav下的所有的div标签*/
+
+        nav div{
+
+            width: 1000px;
+
+            height: 64px;
+
+            /*块元素居中*/
+
+            margin:0 auto;
+
+        }
+
+        #logo{
+
+            width: 216px;
+
+            /*相对定位,位置微调*/
+
+            position: relative;
+
+            top: 7px;
+
+            left: 15px;
+
+        }
+
+        ul{
+
+            float: right;
+
+            margin: 0;
+
+            /*左内边距设为零*/
+
+            padding-left: 0;
+
+        }
+
+        li{
+
+            float: left;
+
+            /*设置列表项的前缀为none*/
+
+            list-style: none;
+
+            margin-right: 30px;
+
+        }
+
+        li a{
+
+            line-height: 64px;
+
+            /*去除超链接下划线*/
+
+            text-decoration: none;
+
+            color: black;
+
+        }
+
+        li a:hover{
+
+            color: brown;
+
+        }
+
+        #header{
+
+            /*图片宽度设为100%*/
+
+            width: 100%;
+
+        }
+
+        main {
+
+            width: 1000px;
+
+            margin:0 auto;
+
+        }
+
+        /*只找到父子关系的标签找到section下img标签，不会找到孙级标签*/
+
+        section > img {
+
+            width: 1000px;
+
+        }
+
+        p {
+
+            color: black;
+
+            /*文本首行缩进2个字符*/
+
+            text-indent: 2em;
+
+        }
+
+        h2 {
+
+            color: red;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--加载音频文件-->
+
+    <audio src="" autoplay></audio>
+
+    <!--加载视频文件-->
+
+    <video src=""></video>
+
+ 
+
+    <!--navigation 导航 标记网页中的导航条 块元素-->
+
+    <nav>
+
+        <div>
+
+            <img id="logo" src="images/logo.png" alt="logo">
+
+            <!--ul无序列表 li 列表元素-->
+
+            <ul>
+
+                <!--实现点击首页标签跳转到指定界面-->
+
+                <!--a标签  超链接标签-->
+
+                <li><a href="#header">首页</a></li>
+
+                <li><a href="#html5">关于此网页</a></li>
+
+                <li><a href="#elevsim">电梯模拟游戏(Android/PC)</a></li>
+
+                <li><a href="#RPSapp">公交报站模拟(兼容海峡,仅Android)</a></li>
+
+                <li><a href="#myvideo">我的交通摄影视频(B站/快手)</a></li>
+
+                <li><a href="#myself">关于我</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <img id="header" src="images/header.jpg" alt="头图">
+
+    <!--main 元素 标记网页中的主要部分内容-->
+
+    <main>
+
+        <!--p标签，用来标记网页中的段落内容！-->
+
+        <p>“欢迎访问新电梯的个人主页，此网站使用html并持续更新，日后可能更新大陆电梯wiki等”</p>
+
+        <!--section 组件、模块, 块元素-->
+
+        <section id="html5">
+
+            <img src="images/html5.jpg" alt="html5.jpg">
+
+            <p>“网页使用先进的html5”</p>
+
+        </section>
+
+ 
+
+        <section id="elevsim">
+
+            <h2>电梯模拟游戏(Android/PC)</h2>
+
+            <div id="myclassmate">
+
+                <img src="images/elevsim.jpg" alt="elevsim.jpg">
+
+            </div>
+
+            <p>持续更新中，当前最新版本：3.0beta3\n使用Unity3D引擎和高清贴图，在手机上即可体验模拟电梯和大厦，并且无需网络，支持局域网联机，可流畅运行。\n更新勤快，功能陆续增加。Bug反馈：加QQ群721754541</p>
+
+        </section>
+
+ 
+
+        <section id="RPSapp">
+
+            <h2>公交报站模拟(兼容海峡,仅Android)</h2>
+
+            <img src="images/RPSapp.jpg" alt="RPSapp.jpg">
+
+            <p>可实现在手机上加载PC端海峡公交报站项目，自动解码播放，支持自定义滚屏等，持续更新，功能丰富，建议/反馈:加QQ</p>
+
+        </section>
+
+ 
+
+        <section id="myvideo">
+
+            <h2>我的交通电梯摄影视频(B站/快手)</h2>
+
+            <img src="images/videorecord.jpg" alt="videorecord.jpg">
+
+            <p>北京主力拍电梯UP/公交迷，老家赤峰（有时会拍），主要发布在B站和快手。正在逐步提高拍摄技术和剪辑水平，主要会使用Premiere,VEGAS,巧影,PS等做视频。视频类型主要有：电梯实拍，电梯构造，公交实拍，公交POV，旅游vlog</p>
+
+        </section>
+
+ 
+
+    </main>
+
+    <hr>
+
+   
+
+    <p id="myself" style="text-align: center;">B站号：新电梯,快手号：保密\n主要拍摄交通类视频，同时也制作数码，计算机，机械等视频，计算机软件开发</p>
+
+ 
+
+</body>
+
+</html>
